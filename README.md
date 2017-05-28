@@ -1,6 +1,7 @@
 # School_admin_sys
-Php school administration web sys
+<h3>Php school administration web sys
 
-deploy to localhost/theschool
-login.txt login info: user & passwords
-theschool_db.sql - MySQL dump file
+<br>deploy to localhost/theschool
+<br>login.txt login info: user & passwords
+<br>theschool_db.sql - MySQL dump file
+<Br>
