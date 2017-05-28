@@ -1,0 +1,249 @@
+body {
+    font-family: 'Bree Serif', serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow-y: hidden;
+}
+:root {
+   --color: black;
+    --bcolor: white;
+    --hcolor: #024d7f;
+}
+header {
+    background-color: var(--bcolor);
+    border-bottom: 1px solid  var(--color);
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    align-items: center;
+    color: var(--color);
+}
+nav img {
+    margin: 0px 1rem 0px 1rem;
+}
+nav a, nav span{
+    text-decoration: none;
+    color: var(--color);
+    margin-left: 2rem;
+}
+nav a:hover{
+    color: var(--bcolor);
+    background-color: var(--color);
+}
+.user_info{
+    display: flex;
+    text-align: right;
+}
+.user_info span {
+    color: var(--color);
+    display: block;
+}
+.user_name {
+    direction: ltr;
+}
+.user_info a {
+    display: block;
+}
+.user_image img {
+    height: 50px;
+    padding: 5px;
+} 
+main {
+   margin-top: 2rem; 
+    color: var(--color);
+   background-color: var(--bcolor);
+    font-family: 'Bree Serif', serif;
+    /* box-shadow: 1px 1px 1px; */
+    padding: 0rem 1rem 1rem 1rem;
+}    
+.school_info, .admins_info {
+    display: flex;
+    justify-content: space-around;
+}
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color);
+    margin-top: -3rem;
+}
+/*.under_line {
+    width: 90%;
+    height: 1px;
+    display: block;
+    background-color: var(--color);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}*/
+.courses_list, .students_list, .admins_list {
+    height: 80vh;
+    overflow-y: auto;
+}
+.courses_list > span, .students_list > span, .admins_list > span{
+    color: var(--color);
+    margin-right: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.new_admins_button,
+.add_student_button,
+.add_course_button{
+    border: none;
+    background: none;
+    color: orange;
+    position: relative;
+    top: 7px;
+    display: inline;
+    font-size: 2.6rem;
+}
+.course, .students, .admins {
+    argin: 0rem 0.5rem 0rem 0px;
+    /* border-top: 1px solid var(--hcolor); */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color);
+    
+}
+.course img, .students img, .admins img, 
+.single_student_courses img, .single_course_students img{
+    height: 2.5rem;
+    margin: 0.2rem 0px 0.4rem 0px;
+}
+.course span, .students span, .admins span {
+    margin-left: 5px;
+}
+.students div span:last-child {
+    color: var(--hcolor);
+    font-size: 12px;
+}
+.course:hover, .students:hover, .admins:hover{
+    background-color: #badcf8;
+}
+.admins div span:last-child, .admins div span:nth-of-type(2) {
+    color: var(--hcolor);
+    font-size: 12px; 
+}
+.main_container {
+    width: 50%;
+    height: 60vh;
+/*    overflow-y: auto;*/
+    background: url(../img/logo.png) left center no-repeat ;
+    transition: background-image 0.5s ease;
+    
+}
+.main_container:focus, 
+.main_container:hover {
+   background-image: url(../img/logoS3.png)
+   
+   
+   
+    
+}
+
+
+
+
+.main_container_logo {
+    width: 350px;
+    /*margin: 0 auto;*/
+    display: block;
+    margin-top: 2rem;
+    overflow:hidden;
+}
+.main_container .under_line {
+    background-color: var(--hcolor);
+    width: 95%;
+}
+.main_head {
+   padding: 1.5rem 0rem 0.5rem 0rem;
+    position: relative;
+    right: -7px;
+}
+.main_head button {
+    font-family: 'Bree Serif', serif;
+}
+.single_student, .single_Course, .single_admin {
+    background-color: var(--bcolor);
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+.single_student img, .single_Course img, .single_admin img {
+    float: left;
+    height: 75px;
+    margin-right: 1rem;
+}
+.single_student span:first-child, .single_Course span:first-child, .single_admin span:first-child {
+    color: var(--color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.single_student_courses, .single_course_students {
+    display: flex;
+    align-items: center;
+    background-color: var(--bcolor);
+    border-radius: 3px;
+    padding-left: 0.5rem;
+    margin-top: 0px;
+}
+.single_student_courses span, .single_course_students span {
+    margin-left: 0.5rem;
+}
+.add_new_course, .add_new_student, .add_new_admin {
+    background-color: var(--bcolor);
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+.form {
+    position: relative;
+}
+.add_new_course input, .add_new_course textArea, .new_student_input, .pic,
+.add_new_admin input, .add_new_admin select{
+    display: block;
+    font-family: 'Bree Serif', serif;
+    background-color: white;
+    border: none;
+    -webkit-app-region: white;
+    border: 1px solid;
+}
+.add_new_course input:not(:first-child), .add_new_course textArea,
+.add_new_student input:not(:first-child), .add_new_student span:first-of-type,
+.add_new_admin input:not(:first-child), .add_new_admin select {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+.add_new_course textArea {
+    width: 60%;
+    resize: none;
+}
+.add_new_student span:first-of-type {
+    color: grey;
+    display: block;
+}
+.delete_course_button, .delete_student_button, .delete_admin_button {
+    display: block;
+    font-family: 'Bree Serif', serif;
+    background-color: white;
+    border: none;
+    -webkit-app-region: white;
+    border: 1px solid;
+    position: absolute;
+    
+    top: 0.5rem;
+    left: 3.5rem;
+
+}
+#output {
+    display: none;
+}
+
+.checkboxes {
+    /*margin: 0rem 1rem 0.5rem 5rem;*/
+}
+
+.checkboxes label {
+    /*margin: 1rem 1rem 0rem 0rem;*/
+}
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>School Admin System - SAS</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/newcss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+         <header></header>
+         <main>
+             <img src="img/logoS.png" alt="supermarket logo"/>
+             <h2>Enter your login & password</h2>
+             <form class="login" action="api.php" method="POST">
+                  <input type="hidden" name="action" value="login">
+                  <input type="text" name="admin_name" placeholder="Full Name">
+                  <input type="password" name="admin_password" placeholder="Password">
+                  <input type="submit" name="Enter" value="Enter">
+              </form>
+             <div class="textAlert"></div>
+         </main>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script>
+            $('.login').on('submit', function (event){
+                 event.preventDefault();
+                 var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    if (this.responseText == 1) {
+                            window.location = "main/index.php";
+                            
+                        }else{
+                             passwordAlert();
+                        }
+                    }
+                }
+              
+                  xhttp.open("POST", "api.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("name=" + document.querySelector('input[name="admin_name"]').value + 
+                     "&password=" + document.querySelector('input[name="admin_password"]').value +
+                     "&action=" + document.querySelector('input[name="action"]').value);
+            clerInput();
+        });
+        
+        function passwordAlert(){
+            if (document.querySelector('.alert')){
+                document.querySelector('.alert').remove();
+            }
+            var div = document.querySelector('.textAlert');
+            var span = document.createElement('sapn');
+            span.classList.add('alert');
+            span.textContent = "Try again!";
+            div.appendChild(span);
+        }
+        function clerInput(){
+            $('input').val('');
+            document.querySelector('input[name="Enter"]').value = "Enter";
+        }
+        </script>
+    </body>
+</html>
