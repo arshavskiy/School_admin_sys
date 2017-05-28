@@ -6,5 +6,5 @@
 <br>theschool_db.sql - MySQL dump file
 <Br>
 <br>lib folder:
-<li>
-<ol>DB.php --> new mysqli('localhost', 'root', '', 'theschool_db');
+<ul>
+<li>DB.php --> new mysqli('localhost', 'root', '', 'theschool_db');
