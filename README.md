@@ -5,6 +5,7 @@
 <br>login.txt login info: user & passwords
 <br>theschool_db.sql - MySQL dump file
 <Br>
+<br>API.php sestion swicth case page builder 
 <br>lib folder:
 <ol>
 <li>DB.php --> new mysqli('localhost', 'root', '', 'theschool_db');
