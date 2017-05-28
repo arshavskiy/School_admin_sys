@@ -8,3 +8,7 @@
 <br>lib folder:
 <ol>
 <li>DB.php --> new mysqli('localhost', 'root', '', 'theschool_db');
+<li>Printer.php --> echo view builder file
+<li>Fetcher.php --> data fetcher file ;
+<li>Admin, Cousrse, Person, Student --> class files;
+
